@@ -4,7 +4,7 @@
 TELEGRAM_TOKEN = "PUT_YOUR_TELEGRAM_BOT_TOKEN_HERE"
 
 # آیدی‌های مجاز تلگرام
-ALLOWED_USER_IDS = [123456789]  # آیدی عددی تلگرام خودت رو بذار
+ALLOWED_USER_IDS = [123456789, 987654321]  # آیدی عددی تلگرام خودت رو بذار
 
 # رمز فایل zip (بهتره عوضش کنی چون لو رفته)
 ZIP_PASSWORD = "PUT_A_STRONG_PASSWORD_HERE"

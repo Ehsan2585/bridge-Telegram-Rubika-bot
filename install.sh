@@ -70,7 +70,7 @@ if [ -z "$SKIP_CONFIG" ]; then
   TG_TOKEN="$IN_TOKEN" IDS="$IN_IDS" GUID="$IN_GUID" ZIPPW="$IN_ZIP" \
   ./venv/bin/python - <<'PY'
 import os, re
-src = open('config.example.py', encoding='utf-8').read()
+src = open('config.py', encoding='utf-8').read()
 
 token = os.environ['TG_TOKEN'].strip()
 ids   = [s.strip() for s in os.environ['IDS'].split(',') if s.strip()]

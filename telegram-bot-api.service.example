@@ -1,0 +1,18 @@
+[Unit]
+Description=Telegram Bot API
+After=network.target
+
+[Service]
+# مقادیر api-id و api-hash را از https://my.telegram.org بگیر و جایگزین کن
+ExecStart=/usr/local/bin/telegram-bot-api \
+  --api-id=YOUR_API_ID \
+  --api-hash=YOUR_API_HASH \
+  --local \
+  --http-port=8081 \
+  --dir=/var/lib/telegram-bot-api
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target

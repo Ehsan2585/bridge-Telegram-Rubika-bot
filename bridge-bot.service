@@ -1,0 +1,25 @@
+[Unit]
+Description=Telegram-Rubika Bridge Bot
+After=network-online.target telegram-bot-api.service
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/bridge-bot
+ExecStart=/root/bridge-bot/venv/bin/python /root/bridge-bot/bot.py
+Restart=always
+RestartSec=10
+
+MemoryMax=300M
+OOMPolicy=kill
+
+StandardOutput=append:/root/bridge-bot/systemd.log
+StandardError=append:/root/bridge-bot/systemd.log
+
+KillMode=mixed
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

@@ -32,7 +32,7 @@
 ## نصب سریع
 
 ```bash
-git clone https://github.com/USERNAME/bridge-bot.git
+git clone https://github.com/Ehsan2585/bridge-Telegram-Rubika-bot.git
 cd bridge-bot
 sudo bash install.sh
 ```
